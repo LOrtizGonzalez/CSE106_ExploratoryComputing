@@ -9,7 +9,7 @@ def main():
     print(arr)
     #b) NEED TO CORRECT
     print("checkered Matrix:")
-    arr2 = np.zeros((8,8))
+    arr2 = np.zeros((8,8), dtype = int) #had to set to int, default was float-type
     arr2[::2, 1::2] = 1
     arr2[1::2, ::2]= 1
     print(arr2)

@@ -3,6 +3,7 @@
 import pandas as pd
 datafile = pd.read_csv("weather_data.txt")
 
+
 #print(data_file)
 #print(df.info())
 #print(df.columns)
@@ -19,7 +20,7 @@ print(datafile.loc[0:30, ['actual_max_temp']].mean()) #Input from July only
 
 #c)
 print("\nDays with the record max temp:")
-print(datafile.loc[datafile.actual_max_temp.max(), "date"])
+print(datafile.loc[datafile.actual_max_temp == datafile.record_max_temp, "date"])
 
 #d)Total rain in Oct 2014
 print("\nTotal rain in October 2014:")
