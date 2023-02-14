@@ -4,11 +4,15 @@ import numpy as np
 
 def main():
     #a)
+    print("4x2 Matrix:")
     arr = np.arange(2,10).reshape(4,2)
     print(arr)
     #b) NEED TO CORRECT
-    # arr2 = [n for n in range(0,2)].reshape(8,8)
-    # print(arr2)
+    print("checkered Matrix:")
+    arr2 = np.zeros((8,8))
+    arr2[::2, 1::2] = 1
+    arr2[1::2, ::2]= 1
+    print(arr2)
     #c)
     print("\n")
     List = [10, 20, 10, 30, 20, 40, 20, 20, 10, 30, 0, 50, 10]

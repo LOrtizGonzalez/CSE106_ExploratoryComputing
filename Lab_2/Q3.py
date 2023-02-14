@@ -2,7 +2,6 @@
 
 import pandas as pd
 datafile = pd.read_csv("weather_data.txt")
-temp1 = pd.read_csv("weather_data.txt")
 
 #print(data_file)
 #print(df.info())
@@ -29,7 +28,6 @@ total = total.sum()
 print(total)
 
 #e)Day/s with low_temp < 60 and max_temp > 90
-print("Days with low temp below 60 and max temp > 90:")
+print("\nDays with low temp below 60 and max temp > 90:")
 dates = (datafile.actual_min_temp < 60) & (datafile.actual_max_temp > 90)
-
 print(datafile.loc[dates,"date"])
