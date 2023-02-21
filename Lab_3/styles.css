@@ -33,6 +33,7 @@ a.Truck {
 li {
     display: inline-block;
     text-align: center;
+    list-style-type: square;
 }
 
 li.gaming a {
@@ -48,6 +49,15 @@ ul.mainpage {
     display: block;
     padding: 90px;
     background-color: rgba(231, 144, 144, 0.5);
+}
+
+ol li{
+    display: list-item;
+    list-style-type: lower-roman;
+    background-color: green;
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 iframe {
