@@ -1,10 +1,20 @@
 h1{
     text-align: center;
+    background-color: coral;
 }
 
 h1.T {
     color: red;
     text-decoration: underline;
+}
+
+h2 {
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: green;
+    width: 33%;
 }
 
 a {
@@ -22,8 +32,12 @@ a.Truck {
 
 li {
     display: inline-block;
-    
     text-align: center;
+}
+
+li.gaming a {
+    background-color: black;
+    color: rgb(231, 36, 36);
 }
 
 ul {
