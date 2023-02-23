@@ -1,0 +1,7 @@
+button {
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    font-size-adjust: 1.2;
+    /* text-decoration: underline; */
+}

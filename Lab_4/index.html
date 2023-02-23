@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <script src="myScript.js"></script>
+    </head>
+
+    <body>
+        <div>
+            <p id="calc_display">0</p>
+            <button onclick="clearFunction()">C</button>
+        </div>
+        <div>
+            <button onclick="buttonClicked(7)">7</button>
+            <button onclick="buttonClicked(8)">8</button>
+            <button onclick="buttonClicked(9)">9</button>
+            <button onclick="arithmeticButtonClicked('/')">/</button>
+        </div>
+        <div id="secondNumRow">
+            <button onclick="buttonClicked(4)">4</button>
+            <button onclick="buttonClicked(5)">5</button>
+            <button onclick="buttonClicked(6)">6</button>
+            <button onclick="arithmeticButtonClicked('*')">x</button>
+        </div>
+        <div id="firstNumRow">
+            <button onclick="buttonClicked(1)">1</button>
+            <button onclick="buttonClicked(2)">2</button>
+            <button onclick="buttonClicked(3)">3</button>
+            <button onclick="arithmeticButtonClicked('-')">-</button>
+        </div>
+        <div>
+            <button onclick="buttonClicked(0)">0</button>
+            <button onclick="decimalClicked()">.</button>
+            <button onclick="arithmeticButtonClicked('=')">=</button>
+            <button onclick="arithmeticButtonClicked('+')">+</button>
+        </div>
+    </body>
+</html>
