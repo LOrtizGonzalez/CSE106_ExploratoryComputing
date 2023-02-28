@@ -1,38 +1,53 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="styles.css">
+        <!-- <link rel="stylesheet" href="styles.css"> -->
+        <link rel="stylesheet" href="styles1.css">
         <script src="myScript.js"></script>
     </head>
 
+    <!-- <body>
+        <div class="grid-buttons">
+            <div id="calc_display" class="display">0</div>
+            <div class="clear" onclick="clearFunction()">C</div>
+            <div class="gridNum9" onclick="buttonClicked(9)">9</div>
+            <div class="gridNum8" onclick="buttonClicked(8)">8</div>
+            <div class="gridNum7" onclick="buttonClicked(7)">7</div>
+            <div class="gridNum6" onclick="buttonClicked(6)">6</div>
+            <div class="gridNum5" onclick="buttonClicked(5)">5</div>
+            <div class="gridNum4" onclick="buttonClicked(4)">4</div>
+            <div class="gridNum3" onclick="buttonClicked(3)">3</div>
+            <div class="gridNum2" onclick="buttonClicked(2)">2</div>
+            <div class="gridNum1" onclick="buttonClicked(1)">1</div>
+            <div class="gridNum0" onclick="buttonClicked(0)">0</div>
+            <div class="dec" onclick="decimalClicked()">.</div>
+            <div class="gridArithD" onclick="arithmeticButtonClicked('/')">/</div>
+            <div class="gridArithM" onclick="arithmeticButtonClicked('*')">x</div>
+            <div class="gridArithS" onclick="arithmeticButtonClicked('-')">-</div>
+            <div class="gridArithA" onclick="arithmeticButtonClicked('+')">+</div>
+            <div class="gridArithE" onclick="arithmeticButtonClicked('=')">=</div>
+        </div>
+    </body> -->
     <body>
-        <div>
+        <div class="calc_grid">
             <p id="calc_display">0</p>
-            <button onclick="clearFunction()">C</button>
-        </div>
-        <div>
-            <button onclick="buttonClicked(7)">7</button>
-            <button onclick="buttonClicked(8)">8</button>
-            <button onclick="buttonClicked(9)">9</button>
-            <button onclick="arithmeticButtonClicked('/')">/</button>
-        </div>
-        <div id="secondNumRow">
-            <button onclick="buttonClicked(4)">4</button>
-            <button onclick="buttonClicked(5)">5</button>
-            <button onclick="buttonClicked(6)">6</button>
-            <button onclick="arithmeticButtonClicked('*')">x</button>
-        </div>
-        <div id="firstNumRow">
-            <button onclick="buttonClicked(1)">1</button>
-            <button onclick="buttonClicked(2)">2</button>
-            <button onclick="buttonClicked(3)">3</button>
-            <button onclick="arithmeticButtonClicked('-')">-</button>
-        </div>
-        <div>
-            <button onclick="buttonClicked(0)">0</button>
-            <button onclick="decimalClicked()">.</button>
-            <button onclick="arithmeticButtonClicked('=')">=</button>
-            <button onclick="arithmeticButtonClicked('+')">+</button>
+            <button class="clear" onclick="clearFunction()">C</button>
+            <button class="num0" onclick="buttonClicked(0)">0</button>
+            <button class="num1" onclick="buttonClicked(1)">1</button>
+            <button class="num2" onclick="buttonClicked(2)">2</button>
+            <button class="num3" onclick="buttonClicked(3)">3</button>
+            <button class="num4" onclick="buttonClicked(4)">4</button>
+            <button class="num5" onclick="buttonClicked(5)">5</button>
+            <button class="num6" onclick="buttonClicked(6)">6</button>
+            <button class="num7" onclick="buttonClicked(7)">7</button>
+            <button class="num8" onclick="buttonClicked(8)">8</button>
+            <button class="num9" onclick="buttonClicked(9)">9</button>
+            <button class="divide" onclick="arithmeticButtonClicked('/')">/</button>
+            <button class="multiply" onclick="arithmeticButtonClicked('*')">x</button>
+            <button class="minus" onclick="arithmeticButtonClicked('-')">-</button>
+            <button class="decimal" onclick="decimalClicked()">.</button>
+            <button class="equals" onclick="arithmeticButtonClicked('=')">=</button>
+            <button class="add" onclick="arithmeticButtonClicked('+')">+</button>    
         </div>
     </body>
 </html>

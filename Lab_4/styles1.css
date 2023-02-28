@@ -1,0 +1,160 @@
+body {
+    background-color: black;
+}
+
+.calc_grid {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    background-color: gray;
+    padding: 10px;
+    text-align: center;
+    grid-template-columns: auto auto auto auto;
+    gap: 10px;
+    width: 60%;
+    /* height: 50%; */
+    margin-top: 100px;
+    /* margin-bottom: auto; */
+    margin-left: auto;
+    margin-right: auto;
+    font-size: x-large;
+}
+
+p {
+    padding: 10px 0;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 25px;
+}
+
+button {
+    padding: 20px 0;
+    /* background-color: bisque; */
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 25px;
+}
+
+#calc_display {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    background-color: white;
+    text-align: center;
+}
+.clear {
+    grid-column-start: 4;
+    background-color: red;
+}
+
+
+.num7 {
+    grid-row-start: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    background-color: limegreen;
+}
+.num8 {
+    grid-row-start: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    background-color: limegreen;
+}
+.num9 {
+    grid-row-start: 2;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    background-color: limegreen;
+}
+.divide {
+    grid-row-start: 2;
+    grid-column-start: 4;
+    background-color: cornflowerblue;
+}
+.divide:focus {
+    background-color: aliceblue;
+}
+
+
+.num4 {
+    grid-row-start: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    background-color: limegreen;
+}
+.num5 {
+    grid-row-start: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    background-color: limegreen;
+}
+.num6 {
+    grid-row-start: 3;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    background-color: limegreen;
+}
+.multiply {
+    grid-row-start: 3;
+    grid-column-start: 4;
+    background-color: cornflowerblue;
+}
+.multiply:focus {
+    background-color: aliceblue;
+}
+
+
+.num1 {
+    grid-row-start: 4;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    background-color: limegreen;
+}
+.num2 {
+    grid-row-start: 4;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    background-color: limegreen;
+}
+.num3 {
+    grid-row-start: 4;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    background-color: limegreen;
+}
+.minus {
+    grid-row-start: 4;
+    grid-column-start: 4;
+    background-color: cornflowerblue;
+}
+.minus:focus {
+    background-color: aliceblue;
+}
+
+
+.num0 {
+    grid-row-start: 5;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    background-color: limegreen;
+}
+.decimal {
+    grid-row-start: 5;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    background-color: limegreen;
+}
+.equals {
+    grid-row-start: 5;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    background-color: cornflowerblue;
+}
+.add {
+    grid-row-start: 5;
+    grid-column-start: 4;
+    background-color: cornflowerblue;
+}
+.add:focus {
+    background-color: aliceblue;
+}
