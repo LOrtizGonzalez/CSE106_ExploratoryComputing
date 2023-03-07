@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="myScript.js"></script>
+  </head>
+  <body>
+
+    <h2>View Complete Student Grades</h2>
+    <div>
+      <form>
+        <button type="button" onclick="getGrades()">View all Grades</button>
+        <table id="allGrades">
+          <tr>
+            <th>Student</th>
+            <th>Grade</th>
+          </tr>
+        </table>
+        <a href="grades.html">Return</a>
+      </form>
+      
+    </div>
+
+    <h2>Search Student</h2>
+    <div>
+      <form>
+        <label for="name">Student Name:</label>
+        <input type="text" id="name" placeholder="Enter student name...">
+        <button type="button" onclick="searchStudent()">Search</button><h2 id="searchReply"></h2>
+      </form>
+    </div>
+
+    <h2>Create New Student</h2>
+    <div id="NewStudent">
+      <form>
+        <label>Name</label>
+        <input type="text" id="newStudentName" placeholder="New Student Name">
+        <label>Grade</label>
+        <input type="text" id="newStudentGrade" placeholder="0.0">
+        <button type="button" onclick="createStudent()">Submit</button><h2 id="createHeader"></h2>
+      </form>
+    </div>
+
+    <h2>Edit Student Grade</h2>
+    <div id="EditStudent">
+      <form>
+        <label>Name</label>
+        <input type="text" id="editGrade" placeholder="Enter student name">
+        <label>New Grade</label>
+        <input type="text" id="updatedGrade" placeholder="0.0">
+        <button type="button" onclick="editGrades()">Submit</button><h2 id="Updated"></h2>
+      </form>      
+    </div>
+
+    <h2>Delete Student Grade</h2>
+    <div>
+      <form>
+        <label>Student Name</label>
+        <input type="text" id="delete_Student" placeholder="Enter name">
+        <button type="button" onclick="deleteStudent()">Delete</button>
+        <h2 id="deletedStudent"></h2>
+      </form>
+    </div>
+
+    <!-- <script>
+    function getGrades() {
+      var xhttp = new XMLHttpRequest();
+      xhttp.open("GET", "https://amhep.pythonanywhere.com/grades");
+      xhttp.onload = function() {
+        document.getElementById("demo").innerHTML = this.responseText;
+      };
+      xhttp.send();
+    }
+    function editGrades() {
+      var xhttp = new XMLHttpRequest();
+      xhttp.open("PUT", "https://amhep.pythonanywhere.com/grades/Aaron%20Strong");
+      xhttp.setRequestHeader("Content-Type", "application/json");
+      xhttp.onload = function() {
+        document.getElementById("demo").innerHTML = this.responseText;
+      };
+      const body = {"grade": document.getElementById("grade").value};
+      xhttp.send(JSON.stringify(body));
+    }
+
+    </script> -->
+
+  </body>
+</html>
