@@ -47,7 +47,8 @@ function createStudent() {
     xhttp.send(JSON.stringify(body));
     xhttp.onload = function() {
         const rep = JSON.parse(this.responseText);
-        document.getElementById("createHeader").innerHTML = "Student " + name1 + " " + rep[name1] + " was created.";
+        // document.getElementById("createHeader").innerHTML = "Student " + name1 + " " + rep[name1] + " was created.";
+        document.getElementById("createHeader").innerHTML = "Student " + name1 + " was created.";
     };
 }
 
@@ -69,7 +70,7 @@ function editGrades(name) {
             xtp.onload = function() {
                 if(xtp.status != 404) {
                     const rep = JSON.parse(this.responseText);
-                    document.getElementById("Updated").innerHTML = "Updated" + val + " with new Grade: " + rep[val];
+                    document.getElementById("Updated").innerHTML = "Updated " + val + " with new Grade: " + rep[val];
                 }
             }
             xtp.send(JSON.stringify(payload));
@@ -94,7 +95,7 @@ function deleteStudent() {
             var xtp = new XMLHttpRequest();
             xtp.open("DELETE", url, true);
             xtp.onload = function() {
-                document.getElementById("deletedStudent").innerHTML = "Deleted" + val;
+                document.getElementById("deletedStudent").innerHTML = "Deleted " + val;
             }
             xtp.send();
         }
