@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <table>
+            <tr>
+                <th>Name</th><th>Grade</th>
+            </tr>
+            <!-- {% for row in data %}
+            <tr>
+                <td>{{data['name']}}</td><td>{{data['grade']}}</td>
+            </tr>
+            {% endfor %} -->
+            {% for key,value in data.items() %}
+            <tr>
+                <th>{{key}}</th>
+                <td>{{value}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+
+        <form>
+            <p><input type="submit" value="return"></p>
+        </form>
+    </body>
+</html>
