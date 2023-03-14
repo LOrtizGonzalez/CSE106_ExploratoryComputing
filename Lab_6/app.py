@@ -1,3 +1,4 @@
+import logging
 from flask import Flask, abort, jsonify, render_template, url_for, redirect, request
 from flask_cors import CORS
 import json
@@ -17,7 +18,7 @@ def viewGrades():
             string += row.strip()
     currGrades = json.loads(string) # Loading data into new dictionary in json format
     response = jsonify(currGrades)
-    print(response)
+    #print(response)
     response.headers.add('Access-Control-Allow-Origin', '*')
     return response
 
@@ -49,16 +50,27 @@ def createStudent():
         file.write(json_dump)
     return studentGrade
     
+@app.route("/grades/<name>", methods = ["PUT"])
+def editGrade(name):
+    studentGrade = json.load(open("static/data.json"))
+    if name in studentGrade:
+        newSub = request.get_json()
+        studentGrade[name] = newSub['grade']
+        add_json = open("static/data.json", 'w')
+        json.dump(studentGrade, add_json)
+        add_json.close()
+        return studentGrade
 
-
-# def main():
-#     file = open("data.json", 'r')
-#     data = file.read()
-#     file.close()
-#     grades = json.loads(data)
-#     for key,value in grades.items():
-#         print(key,value)
-
+@app.route("/grades/<name>", methods = ["DELETE"])
+def deleteStudent(name):
+    studentGrade = json.load(open("static/data.json"))
+    if name in studentGrade:
+        del studentGrade[name]
+        add_json = open("static/data.json", 'w')
+        json.dump(studentGrade, add_json)
+        add_json.close()
+        return studentGrade
+    
 
 if __name__ == '__main__':
     app.run(debug=True)

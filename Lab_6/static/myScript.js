@@ -3,7 +3,7 @@ var baseURL = "http://127.0.0.1:5000";
 function getGrades() {
     var xhttp = new XMLHttpRequest();
     var url = baseURL + "/grades";
-    console.log(url)
+    console.log("in xmlgetGrades")//console.log(url)
     xhttp.open("GET", url, true);
     xhttp.onload= function() {
         const rep = JSON.parse(this.responseText);
@@ -19,7 +19,7 @@ function searchStudent() {
     var url = baseURL + "/grades/"; //will be used when sending request
     
     url += val
-    console.log(url);
+    console.log("in xmlsearchStudent")//console.log(url);
     var xhttp = new XMLHttpRequest();
     xhttp.open("GET", url,true);
     xhttp.onload = function() {
@@ -53,33 +53,29 @@ function createStudent() {
     };
 }
 
-function editGrades(name) {
-    let val = document.getElementById("editGrade").value;
+function editGrades() {
+    var name1 = document.getElementById("editGrade").value;
+    var grade1 = document.getElementById("updatedGrade").value;
+//console.log(name1, grade1)
     var xhttp = new XMLHttpRequest();
-    var url = baseURL + "/" + val;
-    xhttp.open("GET", url);
-    xhttp.onload = function() {
-        if(xhttp.status != 404) {
-            const payload = {
-                grade: eval(document.getElementById("updatedGrade").value)
-            }
-            var xtp = new XMLHttpRequest();
-            xtp.open("PUT", url, true);
-            xtp.setRequestHeader("Content-Type", "application/json");
-            xtp.onload = function() {
-                if(xtp.status != 404) {
-                    const rep = JSON.parse(this.responseText);
-                    document.getElementById("Updated").innerHTML = "Updated " + val + " with new Grade: " + rep[val];
-                }
-            }
-            xtp.send(JSON.stringify(payload));
-        }
-        else {
-            document.getElementById("Updated").innerHTML = "Student does not exist."
-        }
+    xhttp.open("PUT", baseURL + "/grades/" + name1, true);
+    //console.log(baseURL+"/grades/"+name1)
+    xhttp.setRequestHeader("Content-Type", "application/json");
+    const body = {
+        grade : Number(grade1)
     };
-    xhttp.send();
+    xhttp.send(JSON.stringify(body));
+    xhttp.onload = function () {
+        let rep = JSON.parse(this.responseText);
+        //rep = JSON.parse(rep);
+        Object.entries(rep).forEach(([key,value]) => {
+            if(key == name1) {
+                document.getElementById("Updated").innerHTML = key + ":" + value;
+            }
+        });
+    };
 }
+
 
 function deleteStudent() {
     let val = document.getElementById("delete_Student").value;
