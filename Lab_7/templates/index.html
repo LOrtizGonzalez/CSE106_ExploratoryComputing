@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <script src="static/myScript.js"></script>
+  </head>
+  <body>
+
+    <h2>View Complete Student Grades</h2>
+    <div>
+      <form>
+        <button type="button" onclick="getGrades()">View all Student Grades</button>
+        <table id="allGrades">
+          <tr>
+            <th>Student</th>
+            <th>Grade</th>
+          </tr>
+        </table>
+        <a href="http://127.0.0.1:5000">Close</a>
+      </form>
+      
+    </div>
+
+    <h2>Search Student</h2>
+    <div>
+      <form>
+        <label for="name">Student Name:</label>
+        <input type="text" id="name" placeholder="Enter student name...">
+        <button type="button" onclick="searchStudent()">Search</button><h3 id="searchReply"></h3>
+      </form>
+    </div>
+
+    <h2>Create New Student</h2>
+    <div id="NewStudent">
+      <form>
+        <label>Name</label>
+        <input type="text" id="newStudentName" placeholder="New Student Name">
+        <label>Grade</label>
+        <input type="text" id="newStudentGrade" placeholder="0.0">
+        <button type="button" onclick="createStudent()">Submit</button><h3 id="createHeader"></h3>
+      </form>
+    </div>
+
+    <h2>Edit Student Grade</h2>
+    <div id="EditStudent">
+      <form>
+        <label>Name</label>
+        <input type="text" id="editGrade" placeholder="Enter student name">
+        <label>New Grade</label>
+        <input type="text" id="updatedGrade" placeholder="0.0">
+        <button type="button" onclick="editGrades()">Submit</button><h3 id="Updated"></h3>
+      </form>      
+    </div>
+
+    <h2>Delete Student Grade</h2>
+    <div>
+      <form>
+        <label>Student Name</label>
+        <input type="text" id="delete_Student" placeholder="Enter name">
+        <button type="button" onclick="deleteStudent()">Delete</button>
+        <h3 id="deletedStudent"></h3>
+      </form>
+    </div>
+
+  </body>
+</html>
